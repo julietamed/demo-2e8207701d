@@ -1,0 +1,42 @@
+/* Configurador: el producto arriba, las opciones al alcance del pulgar y el pedido siempre visible. */
+.configurador { background: var(--fondo); }
+.taller { display: grid; gap: 0; padding-bottom: 12px; }
+.taller__marca { padding: max(16px, env(safe-area-inset-top)) 20px 0; text-align: center; }
+.taller .marca img { width: min(52vw, 280px); }
+.taller .capitulo__bajada { margin-top: 6px; font-size: .95rem; }
+.taller__producto { position: relative; width: min(100vw, 58svh); aspect-ratio: 1; margin: 0 auto; }
+.taller__poster, .taller__lienzo {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+  /* El reflejo se desvanece: sin esto terminaría en un corte recto al final del lienzo. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent);
+  mask-image: linear-gradient(to bottom, #000 90%, transparent);
+}
+.taller__lienzo { opacity: 0; transition: opacity .35s ease; touch-action: pan-y; cursor: grab; }
+.taller__lienzo:active { cursor: grabbing; }
+.taller__lienzo.es-visible { opacity: 1; }
+.taller__pista { position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; color: var(--texto-suave); font-size: .88rem; pointer-events: none; }
+
+.taller__opciones { padding: 4px 20px 20px; max-width: 520px; width: 100%; margin: 0 auto; }
+.taller__opciones .etiqueta-ejemplo { margin: 0 0 10px; font-size: .78rem; padding: 3px 10px; }
+.opcion { border: 0; padding: 0; margin: 0 0 12px; min-width: 0; }
+.opcion legend { padding: 0; margin-bottom: 4px; color: var(--texto-suave); font-size: .95rem; }
+.opcion legend strong { color: var(--texto); font-weight: 600; margin-left: 4px; }
+.muestras { display: flex; flex-wrap: wrap; gap: 4px; }
+.muestras label { position: relative; display: grid; place-items: center; width: 48px; height: 48px; cursor: pointer; }
+.muestras input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.muestra { display: block; width: 36px; height: 36px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .28); transition: box-shadow .15s ease; }
+.muestras input:checked + .muestra { box-shadow: 0 0 0 2px var(--fondo), 0 0 0 4px var(--acento); }
+.muestras input:focus-visible + .muestra { outline: 2px solid var(--texto); outline-offset: 5px; }
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+.configurador .bloque { padding-top: 40px; padding-bottom: 40px; }
+.configurador main { padding-bottom: 92px; } /* que el botón fijo no tape el final */
+.configurador .enlaces { padding-bottom: 0; }
+
+@media (orientation: landscape) and (min-width: 900px) {
+  .taller { grid-template-columns: minmax(0, 1fr) minmax(320px, 420px); grid-template-rows: auto 1fr; min-height: 100svh; align-items: center; column-gap: 24px; padding: 0 clamp(16px, 3vw, 48px); }
+  .taller__producto { grid-column: 1; grid-row: 1 / span 2; width: min(100%, 94svh); }
+  .taller__marca { grid-column: 2; grid-row: 1; text-align: left; padding: 40px 0 0; align-self: end; }
+  .taller__opciones { grid-column: 2; grid-row: 2; align-self: start; padding: 20px 0; margin: 0; }
+  .configurador .cta-fija { left: auto; right: clamp(16px, 3vw, 48px); width: min(420px, 34vw); margin: 0; }
+}

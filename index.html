@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14110D">
+<title>Albahío — Arma tu bolso</title>
+<link rel="icon" href="data:,">
+<link rel="preload" as="image" href="poster.webp">
+<style>:root{ --fondo:#14110D;--superficie:#211C16;--texto:#F4EBDD;--texto-suave:#B3A692;--acento:#C98A4B;--sobre-acento:#14110D; }</style>
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="configurador.css">
+<script id="datos-sitio" type="application/json">{"modelo": "modelo/bolso.glb", "fondo": "#14110D", "camara": {"fov": 20.407, "posicion": [0.42, 0.3, 1.26], "objetivo": [0.0, 0.185, 0.0]}, "opciones": {"cueros": {"caramelo": {"nombre": "Caramelo", "color": "#B5733A", "ribete": "#6B4220", "hilo": "#E8D3A8"}, "tabaco": {"nombre": "Tabaco", "color": "#7A4A28", "ribete": "#3A2413", "hilo": "#E8D3A8"}, "vino": {"nombre": "Vino", "color": "#7A2230", "ribete": "#3B0F16", "hilo": "#E8CFC0"}, "verde": {"nombre": "Verde", "color": "#47663F", "ribete": "#22331F", "hilo": "#E6DCC0"}, "negro": {"nombre": "Negro", "color": "#2C2826", "ribete": "#171513", "hilo": "#CFC6B4"}, "crema": {"nombre": "Crema", "color": "#DCC7A3", "ribete": "#8A6A45", "hilo": "#6B4F35"}}, "herrajes": {"dorado": {"nombre": "Dorado", "mensaje": "dorados", "color": "#C9A25E", "tinta": "#2A170D", "metal": 1.0, "rugosidad": 0.3}, "plateado": {"nombre": "Plateado", "mensaje": "plateados", "color": "#C9CCD1", "tinta": "#1E1F22", "metal": 1.0, "rugosidad": 0.28}, "negro": {"nombre": "Negro mate", "mensaje": "negro mate", "color": "#2F2F33", "tinta": "#E8E4DC", "metal": 0.6, "rugosidad": 0.55}}}, "whatsapp": "https://wa.me/573225749960"}</script>
+<script type="module" src="js/configurador_main.js"></script>
+</head>
+<body class="configurador">
+<main>
+  <section class="taller" aria-label="Configura tu bolso">
+    <header class="taller__marca">
+      <h1 class="marca" aria-label="Albahío"><img src="wordmark.svg" alt=""></h1>
+      <p class="capitulo__bajada">Marroquinería y bolsos en Bogotá</p>
+    </header>
+    <div class="taller__producto">
+      <img id="poster" class="taller__poster" src="poster.webp" alt="El bolso se cose, la cremallera se cierra y las asas se unen" width="720" height="720">
+      <canvas id="producto" class="taller__lienzo" aria-label="Bolso en 3D: arrastra para girarlo"></canvas>
+      <p id="pista" class="taller__pista">Cargando el bolso en 3D…</p>
+    </div>
+    <form class="taller__opciones" onsubmit="return false">
+      <p class="etiqueta-ejemplo" data-ejemplo>Colores de ejemplo</p>
+      <fieldset class="opcion"><legend>Cuero: <strong data-nombre="cuero">Caramelo</strong></legend><div class="muestras"><label><input type="radio" name="cuero" value="caramelo" aria-label="Caramelo" checked><span class="muestra" style="--c:#B5733A"></span></label><label><input type="radio" name="cuero" value="tabaco" aria-label="Tabaco"><span class="muestra" style="--c:#7A4A28"></span></label><label><input type="radio" name="cuero" value="vino" aria-label="Vino"><span class="muestra" style="--c:#7A2230"></span></label><label><input type="radio" name="cuero" value="verde" aria-label="Verde"><span class="muestra" style="--c:#47663F"></span></label><label><input type="radio" name="cuero" value="negro" aria-label="Negro"><span class="muestra" style="--c:#2C2826"></span></label><label><input type="radio" name="cuero" value="crema" aria-label="Crema"><span class="muestra" style="--c:#DCC7A3"></span></label></div></fieldset>
+      <fieldset class="opcion"><legend>Herrajes: <strong data-nombre="herraje">Dorado</strong></legend><div class="muestras"><label><input type="radio" name="herraje" value="dorado" aria-label="Dorado" checked><span class="muestra" style="--c:#C9A25E"></span></label><label><input type="radio" name="herraje" value="plateado" aria-label="Plateado"><span class="muestra" style="--c:#C9CCD1"></span></label><label><input type="radio" name="herraje" value="negro" aria-label="Negro mate"><span class="muestra" style="--c:#2F2F33"></span></label></div></fieldset>
+    </form>
+  </section>
+
+  <section id="informacion" class="bloque bloque--prueba"><a class="calificacion" href="https://www.google.com/maps/search/?api=1&amp;query=Albah%C3%ADo%20marroquiner%C3%ADa&amp;query_place_id=ChIJkbD0eN-YP44R09zwciiRUac" target="_blank" rel="noopener"><span class="calificacion__nota">4.9</span><span class="calificacion__texto">en Google · 46 reseñas</span></a>
+    <h2 class="bloque__titulo">Bolsos para llevar Bogotá a tu manera.</h2>
+    <p class="bloque__texto">Mira cada bolso de cerca, con calma. Y si alguno te llama la atención, escríbenos.</p></section>
+
+  <section class="bloque bloque--contacto"><h2 class="bloque__titulo">Ven a conocerlos o escríbenos por WhatsApp.</h2><address class="direccion">Av. 1 de Mayo #24f -40 sur, Rafael Uribe Uribe<br>Bogotá, Cundinamarca</address><div class="enlaces"><a class="boton boton--principal" href="https://wa.me/573225749960?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20bolsos" target="_blank" rel="noopener">Escríbenos por WhatsApp</a><a class="boton" href="https://www.google.com/maps/search/?api=1&amp;query=Albah%C3%ADo%20marroquiner%C3%ADa&amp;query_place_id=ChIJkbD0eN-YP44R09zwciiRUac" target="_blank" rel="noopener">Cómo llegar</a><a class="boton" href="https://www.facebook.com/Albahio" target="_blank" rel="noopener">Facebook</a></div></section>
+</main>
+<a id="pedir" class="cta-fija es-visible" href="https://wa.me/573225749960" target="_blank" rel="noopener">Pedir este bolso por WhatsApp</a>
+</body>
+</html>
